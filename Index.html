@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Syazliyana's Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience-skills">Experience & Skills</a>
+		<a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h1>Nur Hidayah Syazliyana Binti Shamsury</h1>
+        <h3>My Digital Portfolio!</h3>
+		<img  src= "E-Resume/photo.png" alt "photos of me" width= "300" height "70"><br>
+        <p>Final year student of Information Management at Universiti Teknologi MARA (UiTM)</p>
+        <div class="home-buttons">
+            <a href="#about" class="btn">Learn more about me!</a>
+            <a href="E-RESUME/RESUME.pdf" download class="btn">Download my Resume</a>
+        </div>
+    </section>
+
+  
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Motivated Information Management student seeking opportunities in IT & Records industry to apply academic knowledge, develop professional skills and contribute to efficient information systems and data handling.</p>
+        <p><b>My Interest:</b> Data management, digital records and system development.</p>
+        <p><b>My Objective:</b> Aiming to pursue a career in digital records or IT support field.</p>
+        <a href="About.html" class="btn">More About Me</a>
+    </section>
+
+    
+  <section id="projects">
+	<h2> Projects </h2>
+	<p> During my Diploma in Information Management, I got opportunities to work on a lot of projects both for my assignments and during my internship. </p>
+        <a href="Projects.html" class="btn">View All Projects</a>
+  </section>
+
+    <section id="experience-skills">
+        <h2>Experience & Skills</h2>
+        <p><a href="Experience.html" class="btn">View My Experience & Skills</a></p>
+    </section>
+
+	<section id="gallery">
+		<h2> My Gallery </h2>
+		<p><a href="gallery.html" class="btn">View My Gallery</a></p>
+	</section>
+ 
+    <section id="contact">
+  <h2>Contact Information</h2>
+  <p>Email: syazliyana005@gmail.com</p>
+  <p>Phone: +6013-6633808</p>
+  <p>Location: Ipoh, Perak</p>
+  <p>LinkedIn: Hidayah Syazliyana</p>
+  <p>Instagram: @syzliyanaaa</p>
+  <p>TikTok: @shzzna</p>
+
+  <p>Fill out the form below and let's connect!</p>
+
+  <div class="contact-box">
+    <form action="https://formspree.io/f/xpwvyybk" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" placeholder="Your email" required>
+
+      <label for="social">Social Media</label>
+      <input type="text" id="social" name="social" placeholder="Your Instagram / Twitter / LinkedIn">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+
+    <script>
+const sections = document.querySelectorAll('section');
+
+function revealSections() {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        const trigger = window.innerHeight - 100;
+        if (top < trigger) {
+            sec.classList.add('visible');
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded', revealSections);
+
+window.addEventListener('scroll', revealSections);
+</script>
+
+</body>
+<footer class="site-footer">
+    © 2025 Nur Hidayah Syazliyana. All Rights Reserved.
+</footer>
+
+</html>

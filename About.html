@@ -1,0 +1,153 @@
+<html>
+<head>
+    <title>About Me - Syazliyana</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience-skills">Experience & Skills</a>
+		<a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+	
+        <div class="about-card">
+            <h2>Hello! I’m Syazliyana ૮ ˶ᵔ ᵕ ᵔ˶ ა</h2>
+			<p> Name: Nur Hidayah Syazliyana Binti Shamsury </p>
+			<p> Age: 20 years old </p>
+			<p> I was born on 16 June 2005 at Hospital UKM Cheras, Kuala Lumpur. </p>
+			<p> I have always been deeply interested in the digital industry and have been eager to explore and learn more about technology since I was a kid. My curiosity has driven me to understand how digital systems work, experiment with new tools and keep up with the latest trends in technology.</p>
+            <p>I aim to build a career in technology field specifically as a data analyst in the oil and gas industry, just like my mother! </p>
+            <img  src= "E-Resume/about.png" alt "photos of me" width= "300" height "70">
+        </div>
+		<div class="me-card">
+		<h3>My Education Journey !</h3>
+            <p>I was born in Cheras, Kuala Lumpur and was raised in Selangor before moving to Ipoh, Perak in 2014.</p>
+            <ol>
+                <li>Tabika Kemas Pangsapuri ATM, Setiawangsa (2010 - 2011)</li>
+                <li>SK Bandar Baru Selayang (2), Selayang (2012 - 2014)</li>
+				<li>SK Tasik Damai, Ipoh (2015 - 2017) </li>
+				<li>SMK Tasek Damai, Ipoh (2018 - 2022)</li>
+				<li>Univeristi Teknologi MARA (UiTM), Sungai Petani (2023 - 2026) </li>
+				</ol>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d131072.32722148317!2d101.00920590692039!3d4.6101194180442215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31caec79f34033e3%3A0x8fdc9f466952e859!2sIpoh%2C%20Perak!5e1!3m2!1sen!2smy!4v1764923362616!5m2!1sen!2smy" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<p> Click the map above to explore my hometown.</p>
+        </div>
+		
+		<div class="me-card">
+		<h3>Explore my music taste! </h3>
+            <p>I enjoy reading novels, watching rom-com movies and listening to music while playing games on my iPad during my free time. </p>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1jwaf6CWAWUrbqAT5mrKrA?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+			<p>Tap the play button to listen.</p>
+        </div>
+		<div class="countdown">
+		<h1>Countdown to my birthday on June 16, 2026! 🎉 </h1>
+    <div class="flip-clock">
+        <div class="flip-unit">
+            <div class="flip-card" id="days-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" id="days-front">0</div>
+                    <div class="flip-card-back" id="days-back">0</div>
+                </div>
+            </div>
+            <div class="label">Days</div>
+        </div>
+        <div class="flip-unit">
+            <div class="flip-card" id="hours-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" id="hours-front">0</div>
+                    <div class="flip-card-back" id="hours-back">0</div>
+                </div>
+            </div>
+            <div class="label">Hours</div>
+        </div>
+        <div class="flip-unit">
+            <div class="flip-card" id="minutes-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" id="minutes-front">0</div>
+                    <div class="flip-card-back" id="minutes-back">0</div>
+                </div>
+            </div>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="flip-unit">
+            <div class="flip-card" id="seconds-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" id="seconds-front">0</div>
+                    <div class="flip-card-back" id="seconds-back">0</div>
+                </div>
+            </div>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+	</div>
+
+    <script>
+        const targetDate = new Date('2026-06-16T00:00:00').getTime();
+        let prevDays = 0, prevHours = 0, prevMinutes = 0, prevSeconds = 0;
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft <= 0) {
+                document.body.innerHTML = '<h1>Countdown Complete!</h1>';
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // days
+            if (days !== prevDays) {
+                flipCard('days', days);
+                prevDays = days;
+            }
+
+            // hours
+            if (hours !== prevHours) {
+                flipCard('hours', hours);
+                prevHours = hours;
+            }
+
+            //  minutes
+            if (minutes !== prevMinutes) {
+                flipCard('minutes', minutes);
+                prevMinutes = minutes;
+            }
+
+            //  seconds
+            if (seconds !== prevSeconds) {
+                flipCard('seconds', seconds);
+                prevSeconds = seconds;
+            }
+        }
+
+        function flipCard(unit, newValue) {
+            const card = document.getElementById(unit + '-card');
+            const front = document.getElementById(unit + '-front');
+            const back = document.getElementById(unit + '-back');
+
+            back.textContent = newValue;
+            card.classList.add('flipped');
+
+            setTimeout(() => {
+                front.textContent = newValue;
+                card.classList.remove('flipped');
+            }, 300); // transition time
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); 
+    </script>
+</body>
+<footer class="site-footer">
+    © 2025 Nur Hidayah Syazliyana. All Rights Reserved.
+</footer>
+</html>
