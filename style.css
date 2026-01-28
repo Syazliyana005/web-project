@@ -451,5 +451,127 @@ ul li, ol li {
     border-top: 1px solid rgba(0,0,0,0.1);
 }
 
+/* section index */
+.section-box {
+  border: 2px solid #ccc;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 2000px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+/* title index */
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* layout index */
+.section-content {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* image box index */
+.image-box {
+  border: 2px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.image-box img {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* text box index */
+.text-box {
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box img {
+    width: 180px;
+  }
+}
+
+#about,
+#home,
+#projects,
+#experience-skills,
+#gallery {
+  background-image: url("E-Resume/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#about::before,
+#home::before,
+#projects::before,
+#experience-skills::before,
+#gallery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+}
+
+#about > *,
+#home > *,
+#projects > *,
+#experience-skills > *,
+#gallery > * {
+  position: relative;
+  z-index: 1;
+}
+
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.edu-table th,
+.edu-table td {
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.edu-table thead {
+    background-color: #f2f2f2;
+}
+
+.edu-table th {
+    font-weight: 600;
+}
+
+.edu-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.edu-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+
 
 
